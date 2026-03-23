@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Luxe Steps</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">LUXE<span>STEPS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html" class="active">Checkout</a>
+      <a href="cart.html" class="cart-pill" id="cart-pill">
+        🛒 <span id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <h1>Checkout</h1>
+    <p>Fill in your details to complete your order.</p>
+  </div>
+
+  <!-- ===== CHECKOUT LAYOUT ===== -->
+  <div class="checkout-layout">
+
+    <!-- ===== FORM ===== -->
+    <div class="checkout-form-card">
+      <h2>Delivery &amp; Payment</h2>
+      <p class="form-subtitle">All fields are required. Your data is processed securely.</p>
+
+      <form id="checkout-form" novalidate>
+
+        <!-- PERSONAL DETAILS -->
+        <p class="form-section-title">Personal Details</p>
+
+        <div class="form-row">
+          <div class="form-group" id="group-name">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Melin Mukula" autocomplete="name" />
+            <span class="error-msg">Please enter your full name (min 3 characters).</span>
+          </div>
+          <div class="form-group" id="group-email">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="melin@example.com" autocomplete="email" />
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" id="group-phone">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+256 700 000 000" autocomplete="tel" />
+            <span class="error-msg">Please enter a valid phone number (7–15 digits).</span>
+          </div>
+          <div class="form-group" id="group-address">
+            <label for="address">Delivery Address</label>
+            <input type="text" id="address" placeholder="Kampala, Kololo" autocomplete="street-address" />
+            <span class="error-msg">Please enter your delivery address (min 5 characters).</span>
+          </div>
+        </div>
+
+        <!-- PAYMENT DETAILS -->
+        <p class="form-section-title">Payment Details</p>
+
+        <div class="form-group" id="group-card">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" />
+          <span class="error-msg">Please enter a valid 16-digit card number.</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" id="group-expiry">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp" />
+            <span class="error-msg">Please enter a valid expiry date (MM/YY).</span>
+          </div>
+          <div class="form-group" id="group-cvv">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" maxlength="4" autocomplete="cc-csc" />
+            <span class="error-msg">Please enter a valid CVV (3–4 digits).</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn">
+          Place Order 🎉
+        </button>
+
+      </form>
+    </div>
+
+    <!-- ===== ORDER SUMMARY ===== -->
+    <aside class="order-summary">
+      <h3>Your Order</h3>
+      <!-- Populated dynamically by JavaScript -->
+      <div id="checkout-items" class="checkout-items-list" aria-live="polite"></div>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="checkout-subtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="checkout-shipping">$0.00</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>Total</span>
+        <span id="checkout-total">$0.00</span>
+      </div>
+      <a href="cart.html" class="btn-secondary" style="margin-top:1rem">&larr; Edit Cart</a>
+    </aside>
+
+  </div>
+
+  <!-- ===== SUCCESS OVERLAY ===== -->
+  <div id="success-overlay" class="success-overlay" style="display:none"
+       role="dialog" aria-modal="true">
+    <div class="success-icon">🎊</div>
+    <h2>Order Confirmed!</h2>
+    <p>Thank you! Your shoes are on their way. We'll send a confirmation to your email.</p>
+    <button id="continue-btn" class="btn-primary" style="width:auto;padding:.85rem 2.5rem">
+      Continue Shopping
+    </button>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 <span>Luxe Steps</span> &mdash; Designed by Melin Mukula</p>
+  </footer>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

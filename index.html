@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Steps — Premium Footwear</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">LUXE<span>STEPS</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="cart.html" class="cart-pill" id="cart-pill">
+        🛒 <span id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">New Collection 2025</span>
+      <h1>Walk in <span>Style</span></h1>
+      <p>Curated premium footwear for every step of your journey.</p>
+      <a href="#products" class="btn-primary hero-cta">Shop Now &darr;</a>
+    </div>
+  </section>
+
+  <!-- ===== CONTROLS: Search + Filter ===== -->
+  <section class="controls" id="products">
+
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search shoes…"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="Sandals">Sandals</button>
+      <button class="filter-btn" data-category="Slides">Slides</button>
+      <button class="filter-btn" data-category="Sneakers">Sneakers</button>
+      <button class="filter-btn" data-category="Flats">Flats</button>
+    </div>
+
+  </section>
+
+  <!-- ===== PRODUCT GRID ===== -->
+  <section class="section-header">
+    <h2>Our Collection</h2>
+    <span id="product-count"></span>
+  </section>
+
+  <div id="product-grid"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 <span>Luxe Steps</span> &mdash; Designed by Melin Mukula</p>
+  </footer>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

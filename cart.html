@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — Luxe Steps</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">LUXE<span>STEPS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Shop</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="cart.html" class="cart-pill" id="cart-pill">
+        🛒 <span id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <h1>Your Cart</h1>
+    <p>Review your items, adjust quantities, then checkout.</p>
+  </div>
+
+  <!-- ===== CART LAYOUT ===== -->
+  <div class="cart-layout">
+
+    <!-- Cart items — filled dynamically by JavaScript -->
+    <div id="cart-items" class="cart-items-container" aria-live="polite"></div>
+
+    <!-- Order Summary Panel -->
+    <aside class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="summary-subtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping <small>(free over $150)</small></span>
+        <span id="summary-shipping">$0.00</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>Total</span>
+        <span id="summary-total">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="btn-primary" disabled
+        onclick="window.location.href='checkout.html'">
+        Proceed to Checkout &rarr;
+      </button>
+      <a href="index.html" class="btn-secondary">&larr; Continue Shopping</a>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 <span>Luxe Steps</span> &mdash; Designed by Melin Mukula</p>
+  </footer>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
