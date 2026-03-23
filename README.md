@@ -3,7 +3,7 @@ PHOENIX DISCUSSION GROUP PROJECT
 PHOENIX GROUP
 TITLE OF PROJECT :SHOE BUSINESS ...
 DESCRIPTION  : we sell shoes of luxury 
-how to run the page : you scroll down select what yoy need and add it to cart  and then  checkout 👍🏿
+how to run the page : you scroll down select what yoy need and add it to cart  and then  checkout 👍🏿 walk in luxury with us 
 AHIMBISIBWE OWEN
 24/0/02821/PS
 2400702821
